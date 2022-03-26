@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="附件/style.css" type="text/css" rel="stylesheet">
+        <script src="附件/index.js"></script>
         <title>百度一下，你就知道</title>
     </head>
     <body>
@@ -27,20 +29,39 @@
                     </div>
                     <div id="search-div">
                         <div id="search-input">
-                            <input>
+                            <input id="keyword">
                             <div id="search-btn">百度一下</div>
                         </div>
                     </div>
-                    <div id="hot-title">百度热榜</div>
-                    <ul id="hot">
-                        <li>
-                            <span class="hot-order hot-order-1">1</span><span class="hot-content">延迟退休实施原则公布</span><span class="hot-tag hot">热</span>
-                        </li>
-                        <li>
-                            <span class="hot-order">4</span><span class="hot-content">驻港公署:干预香港事务是痴心妄想</span>
-                        </li>
-                        <!-- TODO: 完成剩余部分的代码 -->
-                    </ul>
+                    <div class="rank">
+                        <div id="hot-title"
+                             class="spread">
+                        <span class="left">
+                            <span><img class="title-icon"
+                                       src="img/game.png"
+                                       alt="game"></span>
+                            <span style="font-size: 20px;color: #64b4f3">热榜之19377333分榜</span>
+                        </span>
+                            <span class="right">
+                            <span style="color: #9195a3">更多</span><span><img style="height: 10px; margin-right: 4px"
+                                                                             src="img/right.png"
+                                                                             alt="goto"></span>
+                        </span>
+                        </div>
+                        <ul id="hot">
+                            <li class="spread">
+                            <span class="left">
+                                <span class="hot-order hot-order-1">1</span><span class="hot-content">原神</span>
+                            </span>
+                                <span class="right">
+                                <span class="hot-value">324853</span>
+                                <span><img class="status-icon"
+                                           src="img/up.png"
+                                           alt="status"></span>
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="footer">本网页仅用于软工实验使用</div>
@@ -50,6 +71,32 @@
         <style>
             #logo{
                 background-image: url('./img/logo.png');
+            }
+
+            .hot-value{
+                color: #9195a3;
+            }
+
+            .status-icon{
+                height: 15px;
+                vertical-align: -2px;
+            }
+
+            .title-icon{
+                height: 25px;
+                vertical-align: -4px;
+            }
+
+            .spread{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .rank{
+                width: 45%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
             }
         </style>
     </body>

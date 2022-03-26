@@ -193,10 +193,10 @@ body{
 }
 
 #hot-title{
-    width: 654px;
+    /*width: 654px;*/
     height: 24px;
     line-height: 24px;
-    margin: 45px auto 4px;
+    margin: 45px 0 4px 0;
     font-size: 14px;
 }
 
@@ -206,7 +206,6 @@ body{
 }
 
 #hot li{
-    width: 268px;
     height: 32px;
     list-style: none;
     line-height: 32px;
@@ -217,15 +216,15 @@ body{
     cursor: pointer;
 }
 
-#hot li:nth-child(odd){
-    margin-right: 60px;
-    float: left;
-}
+/*#hot li:nth-child(odd){*/
+/*    margin-right: 60px;*/
+/*    float: left;*/
+/*}*/
 
-#hot li:nth-child(even){
-    margin-left: 58px;
-    float: right;
-}
+/*#hot li:nth-child(even){*/
+/*    margin-left: 58px;*/
+/*    float: right;*/
+/*}*/
 
 #hot li .hot-order{
     margin-right: 2px;
