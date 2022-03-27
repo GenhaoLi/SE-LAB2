@@ -48,19 +48,32 @@
                                                                              alt="goto"></span>
                         </span>
                         </div>
-                        <ul id="hot">
-                            <li class="spread">
-                            <span class="left">
-                                <span class="hot-order hot-order-1">1</span><span class="hot-content">原神</span>
-                            </span>
-                                <span class="right">
-                                <span class="hot-value">324853</span>
-                                <span><img class="status-icon"
-                                           src="img/up.png"
-                                           alt="status"></span>
-                            </span>
-                            </li>
-                        </ul>
+                        <div id="hot">
+                            <div style="display: flex; margin: 10px 0 5px">
+                                <div class="tagged-game-icon">
+                                    <div class="num-tag">1</div>
+                                    <img class="game-icon" src="img/genshin.jpg" alt="genshin">
+                                </div>
+                                <div class="game-info">
+                                    <div class="game-name">原神</div>
+                                    <div class="hot-info">
+                                        <span>热搜指数：324853</span><img class="status-icon" src="img/up.png" alt="status">
+                                    </div>
+                                    <div class="game-type">手机游戏</div>
+                                </div>
+                            </div>
+<!--                            <li class="spread">-->
+<!--                            <span class="left">-->
+<!--                                <span class="hot-order hot-order-1">1</span><span class="hot-content">原神</span>-->
+<!--                            </span>-->
+<!--                                <span class="right">-->
+<!--                                <span class="hot-value">324853</span>-->
+<!--                                <span><img class="status-icon"-->
+<!--                                           src="img/up.png"-->
+<!--                                           alt="status"></span>-->
+<!--                            </span>-->
+<!--                            </li>-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,6 +110,54 @@
                 margin: auto;
                 display: flex;
                 flex-direction: column;
+            }
+
+            .tagged-game-icon{
+                position: relative;
+            }
+
+            .game-info{
+                margin-left: 20px;
+            }
+
+            .game-icon{
+                height: 107px;
+                border-radius: 8px;
+            }
+
+            .num-tag{
+                background-color: #fe2d46;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 8px 1px 8px 1px;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .game-type{
+                color: #9195a3;
+                font-size: 13px;
+                line-height: 13px;
+            }
+
+            .hot-info{
+                height: 13px;
+                margin: 8px 0 12px;
+                font-size: 13px;
+                line-height: 13px;
+                color: #626675;
+            }
+
+            .game-name{
+                margin-top: 8px;
+                font-size: 14px;
+                line-height: 22px;
+                color: #222;
             }
         </style>
     </body>

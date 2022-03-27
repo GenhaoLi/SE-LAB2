@@ -12,15 +12,32 @@ window.onload = function() {
         clickLogin();
     })
 
-
+    let inputELem = document.getElementById('keyword');
+    inputELem.addEventListener('keydown', (event) => {
+        if (event.code === 'Enter') {
+            search();
+        }
+    })
 
     let hotList = document.getElementById("hot");
-    let modelHTML = hotList.innerHTML;
+    // let modelHTML = hotList.innerHTML;
+    let modelHTML = `
+                            <li class="spread">
+                            <span class="left">
+                                <span class="hot-order hot-order-1">1</span><span class="hot-content">原神</span>
+                            </span>
+                                <span class="right">
+                                <span class="hot-value">324853</span>
+                                <span><img class="status-icon"
+                                           src="../img/up.png"
+                                           alt="status"></span>
+                            </span>
+                            </li>`;
     let str = '';
     let games = ['原神', '香肠派对', '王者荣耀','我的世界','和平精英','植物大战僵尸','迷你世界','光遇','泰拉瑞亚','绝地求生'];
     let hotValues = [324853, 168931, 161167, 127320, 123379, 88496, 79547, 76194, 54000, 49095];
     let hengIndices = [2, 4, 7];
-    for(let i = 0; i < 10; i++) {
+    for(let i = 1; i < 10; i++) {
         let model = createElementFromHTML(modelHTML);
         let orderElem = model.getElementsByClassName('hot-order')[0];
         orderElem.innerHTML = (i+1).toString();
@@ -39,7 +56,7 @@ window.onload = function() {
 
         str += model.outerHTML;
     }
-    hotList.innerHTML = str;
+    hotList.innerHTML += str;
     console.log(hotList);
 }
 
@@ -53,7 +70,12 @@ function createElementFromHTML(htmlString) {
 
 function search() {
     let keyword = document.getElementById("keyword").value;
-    alert(keyword.length === 0 ? "请输入搜索内容" : keyword);
+    // alert(keyword.length === 0 ? "请输入搜索内容" : keyword);
+    if (keyword.length === 0) {
+        alert('请输入搜索内容');
+    } else {
+        window.open(`https://www.baidu.com/s?ie=UTF-8&wd=${keyword}`);
+    }
 }
 
 function clickLogin() {
@@ -66,7 +88,6 @@ function clickLogin() {
 }
 
 function initUserInfo() {
-    // TODO: 修改页面显示错误的 bug，另外注意图片路径是否正确
     let username = Kernal.getUserName();
     let content = '<div id="user">\
                         <span id="user-img">\
